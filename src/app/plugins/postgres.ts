@@ -2,17 +2,14 @@ import fastifyPostgres from '@fastify/postgres';
 import 'dotenv/config';
 import { FastifyInstance } from 'fastify';
 import fp from 'fastify-plugin';
+import * as Config from '../../config';
 
 /**
  * This plugins adds some utilities to handle @fastify/postgres
  *
  */
 export default fp(async function (fastify: FastifyInstance) {
-  console.log(
-    `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@localhost:5432/${process.env.POSTGRES_DB}`,
-    'CONNECT DB'
-  );
   fastify.register(fastifyPostgres, {
-    connectionString: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@localhost:5432/${process.env.POSTGRES_DB}`,
+    connectionString: `postgres://${Config.PostgresConfig.User}:${Config.PostgresConfig.Password}@localhost:5432/${Config.PostgresConfig.DB}`,
   });
 });

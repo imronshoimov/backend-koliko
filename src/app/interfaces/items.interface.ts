@@ -1,8 +1,9 @@
 interface IParams {
-  id: string;
+  userId: number;
+  amount: number;
 }
 
-interface Item {
+interface Product {
   title: string;
   description: string;
   price: number;
@@ -11,4 +12,4 @@ interface Item {
   thumbnail: string;
 }
 
-export { IParams, Item };
+export { IParams, Product };
