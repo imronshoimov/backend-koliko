@@ -8,6 +8,10 @@ import fp from 'fastify-plugin';
  *
  */
 export default fp(async function (fastify: FastifyInstance) {
+  console.log(
+    `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@localhost:5432/${process.env.POSTGRES_DB}`,
+    'CONNECT DB'
+  );
   fastify.register(fastifyPostgres, {
     connectionString: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@localhost:5432/${process.env.POSTGRES_DB}`,
   });

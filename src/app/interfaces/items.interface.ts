@@ -2,7 +2,7 @@ interface IParams {
   id: string;
 }
 
-interface Product {
+interface Item {
   title: string;
   description: string;
   price: number;
@@ -11,4 +11,4 @@ interface Product {
   thumbnail: string;
 }
 
-export { IParams, Product };
+export { IParams, Item };
