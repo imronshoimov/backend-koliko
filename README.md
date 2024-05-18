@@ -18,7 +18,7 @@
 
 2.Set tables and mock data in database folder!
 
-````bash
+```bash
 create database web_server;
 
 create table users(
@@ -40,4 +40,4 @@ SKINPORT_ENDPOINT=https://api.skinport.com/v1
 SKINPORT_APPID=your_skinport_app_id
 SKINPORT_CURRENCY=EUR
 SKINPORT_TRADABLE=0
-````
+```
