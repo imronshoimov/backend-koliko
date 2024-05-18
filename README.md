@@ -6,8 +6,6 @@
 
    ```bash
 
-   ```
-
    https://github.com/imronshoimov/backend-koliko
 
    cd backend-koliko
@@ -15,6 +13,8 @@
    npm install
 
    npm run start
+
+   ```
 
 2.Set tables and mock data in database folder!
 
